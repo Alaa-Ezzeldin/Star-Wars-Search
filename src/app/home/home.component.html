@@ -1,0 +1,11 @@
+<!-- Input Form -->
+<form [formGroup]="InputForm" (ngSubmit)="onSubmit()" >
+    <img *ngIf="show" src="src/assets/starwars-6-569425.png" alt="">
+
+    <mat-form-field class="example-full-width" >
+        <input formControlName="stringInput" matInput placeholder="Enter your string">
+      </mat-form-field>
+
+</form>
+
+<router-outlet></router-outlet>

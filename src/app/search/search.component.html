@@ -1,0 +1,28 @@
+<!-- sortable drag and drop list start -->
+<ngx-sortable *ngIf="people.length > 0" [items]="people" [listStyle] = "{width:'100%',height: '100%'}">
+  <ng-template let-person>
+    <!-- mat-card for every search item -->
+      <mat-card class="sortable-list-item">
+        <mat-card-title>{{person.name}}</mat-card-title>
+        <mat-card-subtitle> <strong>URL:</strong> {{person.url}}</mat-card-subtitle>
+        <mat-card-subtitle> <strong>Height:</strong> {{person.height}}</mat-card-subtitle>
+        <mat-card-subtitle><strong>Homeworld:</strong>  {{person.homeworld}}</mat-card-subtitle>
+      </mat-card>
+  </ng-template>
+</ngx-sortable>
+<!-- sortable drag and drop list end -->
+
+<!-- div shown if search didn't match anything -->
+<div class="notFound" *ngIf="!people.length > 0">
+    <div class="fade"></div>
+    <section class="star-wars">
+      <div class="crawl">
+        <div class="title">
+          <p>SORRY</p>
+          <h1>Your search did not match any name of Star wars characters.<br>
+            Try again and search one more time.
+          </h1>
+        </div>
+      </div>
+    </section>
+  </div>

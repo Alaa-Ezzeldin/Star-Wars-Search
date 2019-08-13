@@ -1,0 +1,67 @@
+mat-card-title, mat-card-subtitle strong{
+  color: #feda4a;
+}
+
+mat-card {
+  background-color: black;
+  border-style: solid;
+  border-color: rgba(254,218,74,9);
+  margin-bottom: 10px;
+}
+
+
+
+/* Star Wars opening crawl start */
+.notFound{
+  background-color: black;
+}
+
+.fade {
+  background-color: black;
+  position: relative;
+  width: 100%;
+  min-height: 55vh;
+  background-image: linear-gradient(0deg, transparent, black 75%);
+}
+
+.star-wars {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 300px;
+  color: #feda4a;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 700%;
+  font-weight: 700;
+  line-height: 150%;
+  perspective: 400px;
+  text-align: justify;
+}
+
+.crawl {
+  position: relative;
+  top: 99px;
+  transform-origin: 50% 100%;
+  animation: crawl 60s linear;
+}
+
+.crawl > .title {
+  font-size: 100%;
+  text-align: center;
+}
+
+.crawl > .title h1 {
+  text-transform: uppercase;
+}
+
+@keyframes crawl {
+  0% {
+    top: 0;
+    transform: rotateX(20deg)  translateZ(0);
+  }
+  100% { 
+    top: -6000px;
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+/* Star Wars opening crawl end */
